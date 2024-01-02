@@ -1,0 +1,17 @@
+# Hello! This is my first toy project.
+
+# Description
+1. My spending habits are out of control.
+2. I'm not satisfied with existing budgeting apps.
+3. I want a personalized budgeting tool that suits my preferences.
+4. Let's create one!
+
+# Prologue
+- Initially, the frontend will be web-based using [[Electron]].
+- Considering backend/DB options, but not a high priority due to the expected small scale.
+
+## Key Features to Implement
+- Integrate the ChatGPT API.
+- Request ChatGPT for category-wise expense percentages and seek advice.
+- Display responses.
+- Implement the "ChatGPT Advice" feature.
