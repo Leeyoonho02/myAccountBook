@@ -7,7 +7,7 @@
 4. Let's create one!
 
 # Prologue
-- Initially, the frontend will be web-based using [[Electron]].
+- Initially, the frontend will be web-based using [Electron].
 - Considering backend/DB options, but not a high priority due to the expected small scale.
 
 # Key Features to Implement
