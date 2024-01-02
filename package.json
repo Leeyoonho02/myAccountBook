@@ -4,5 +4,11 @@
   "description": "YH's First Personal Project",
   "main": "main.js",
   "author": "LeeYH",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.1.0"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
 }
