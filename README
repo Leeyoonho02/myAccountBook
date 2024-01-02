@@ -10,7 +10,7 @@
 - Initially, the frontend will be web-based using [[Electron]].
 - Considering backend/DB options, but not a high priority due to the expected small scale.
 
-## Key Features to Implement
+# Key Features to Implement
 - Integrate the ChatGPT API.
 - Request ChatGPT for category-wise expense percentages and seek advice.
 - Display responses.
