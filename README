@@ -1,13 +1,11 @@
 # Hello! This is my first toy project.
 
 # Description
-1. My spending habits are out of control.
-2. I'm not satisfied with existing budgeting apps.
-3. I want a personalized budgeting tool that suits my preferences.
-4. Let's create one!
+1. I'm not satisfied with existing budgeting apps.
+2. So I'm going to make my own personalized budgeting tool.
 
 # Prologue
-- Initially, the frontend will be web-based using [Electron].
+- Initially, the frontend will be web-based using Electron.
 - Considering backend/DB options, but not a high priority due to the expected small scale.
 
 # Key Features to Implement
