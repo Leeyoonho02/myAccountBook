@@ -1,8 +1,8 @@
 # Hello! This is my first toy project.
 
 # Description
-1. I'm not satisfied with existing budgeting apps.
-2. So I'm going to make my own personalized budgeting tool.
+1. I'm not satisfied with existing diary apps.
+2. So I'm going to make my own personalized tool.
 
 # Prologue
 - Initially, the frontend will be web-based using Electron.
@@ -10,6 +10,4 @@
 
 # Key Features to Implement
 - Integrate the ChatGPT API.
-- Request ChatGPT for category-wise expense percentages and seek advice.
-- Display responses.
-- Implement the "ChatGPT Advice" feature.
+- Request ChatGPT for deviding today's emotion.
