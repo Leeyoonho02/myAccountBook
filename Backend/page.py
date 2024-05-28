@@ -1,5 +1,5 @@
 class page:
     def __init__(self):
-        self.thanksTo
+        self.id
         self.regret
         self.selfManagement
