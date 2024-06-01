@@ -20,22 +20,25 @@ class diaryDataBase:
 
     def insert(self, date, thankful, regret, study, exercise):
         self.c.execute('''
-            INSERT INTO entries (date, thankful, regret, study, exercise)
+            INSERT INTO pages (date, thankful, regret, study, exercise)
             VALUES (?, ?, ?, ?, ?)
         ''', (date, thankful, regret, study, exercise))
         self.conn.commit()
     
     def update(self, date, field, value):
-        self.c.execute(f'UPDATE entries SET {field} = ? WHERE id = ?', (value, date))
+        self.c.execute(f'UPDATE pages SET {field} = ? WHERE id = ?', (value, date))
         self.conn.commit()
         
     def getEntry(self):
-        self.c.execute('SELECT * FROM entries')
+        self.c.execute('SELECT * FROM pages')
         return self.c.fetchall()
     
     def getEntryByDate(self, date):
-        self.c.execute('SELECT * FROM entries WHERE date =?', (date))
-        return self.c.fetchone()
+        temp = self.c.execute('SELECT * FROM pages WHERE date =?', (date, ))
+        if temp == None:
+            return None
+        else:
+            return self.c.fetchone()
     
     def closeTable(self):
         self.conn.close()
