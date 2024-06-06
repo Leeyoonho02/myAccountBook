@@ -3,9 +3,27 @@ import sqlite3
 import datetime
 import diaryDataBase
 
+entryList = ['Thankful', 'Regret', 'Study', 'Exercise']
+
 def printPage(page):
     for temp in page[1:]:
-        print('\t' + temp + '\n')
+        print(temp + '\n')
+        
+def editPage(DB, date):
+    page = DB.getEntryByDate(date)
+    
+    i = 0
+    for temp in page[2:]:
+        print(page[1] + '\n\n' + temp + '\n')
+        text = input('Type Text>>\n')
+        
+        if text == '':
+            continue
+        else:
+            DB.update(date, entryList[i], temp + '\n' + text)
+        
+        i += 1    
+        os.system('clear')
 
 if __name__ == '__main__':
     os.system('clear')
@@ -22,17 +40,20 @@ if __name__ == '__main__':
 
     while True:
         print('[Select what you want to do]')
-        print('1. Write Today\'s Diary\n2. Edit Page\n3. Show All Page\n4. Exit\n')
+        print('1. Write Today\'s Diary\n2. Edit Page\n3. Show Page\n4. Exit\n')
         select = input('select: ')
         os.system('clear')
         if select == '1':
-            print('Write Today\'s Diary')
+            print('- Write Today\'s Diary\n')
+            editPage(DB, today)
+            os.system('clear')
         elif select == '2':
-            print('Edit Page')
+            print('- Edit Page\n')
         elif select == '3':
-            print('Show All Page')
+            print('- Show Page\n')
+            printPage(DB.getEntryByDate(today))
         elif select == '4':
-            print('Exit')
+            print('- Exit\n')
             break
         else:
             print('[Wrong input] Try again.\n')
