@@ -3,7 +3,7 @@ import sqlite3
 import datetime
 import diaryDataBase
 
-entryList = ['Thankful', 'Regret', 'Study', 'Exercise']
+titleList = ['Thankful', 'Regret', 'Study', 'Exercise']
 
 def printPage(page):
     for temp in page[1:]:
@@ -20,14 +20,14 @@ def editPage(DB, date):
         if text == '':
             continue
         else:
-            DB.update(date, entryList[i], temp + '\n' + text)
+            DB.update(date, titleList[i], temp + '\n' + text)
         
         i += 1    
         os.system('clear')
 
 if __name__ == '__main__':
     os.system('clear')
-    DB = diaryDataBase.diaryDataBase('diaryDBFile')
+    DB = diaryDataBase.diaryDataBase('/Users/leeyh/Desktop/CS/myDiaryApp/Backend/diaryDBFile')
     DB.createTable()
 
     print('Welcome to "myDiaryApp"!\n')
