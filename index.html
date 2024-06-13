@@ -1,19 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>My Diary App</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    <!-- You can also require other files to run in this process -->
+    <h2>Have a good day!</h2>
+    <h1>2024.00.00 Mon</h1>
+    <form id="diary-form">
+      <div>
+        <label for="thankful">1. Thankful:</label><br>
+        <textarea id="thankful" rows="2" cols="50"></textarea>
+      </div>
+      <div>
+        <label for="regret">2. Regret:</label><br>
+        <textarea id="regret" rows="2" cols="50"></textarea>
+      </div>
+      <div>
+        <label for="study">3. Study:</label><br>
+        <textarea id="study" rows="2" cols="50"></textarea>
+      </div>
+      <div>
+        <label for="exercise">4. Exercise:</label><br>
+        <textarea id="exercise" rows="2" cols="50"></textarea>
+      </div>
+      <br>
+      <button type="button" onclick="saveEntry()">Save</button>
+    </form>
+    <div id="entries">
+      <!-- Saved entries will appear here -->
+    </div>
     <script src="./renderer.js"></script>
   </body>
 </html>
