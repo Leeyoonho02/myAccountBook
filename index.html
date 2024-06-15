@@ -6,31 +6,31 @@
     <title>My Diary App</title>
   </head>
   <body>
-    <h2>Have a good day!</h2>
-    <h1>2024.00.00 Mon</h1>
+    <h2>Have a nice day!</h2>
+    <h1 id="page-date">My Diary App</h1>
     <form id="diary-form">
       <div>
-        <label for="thankful">1. Thankful:</label><br>
+        <label for="thankful">Thankful:</label><br>
         <textarea id="thankful" rows="2" cols="50"></textarea>
       </div>
       <div>
-        <label for="regret">2. Regret:</label><br>
+        <label for="regret">Regret:</label><br>
         <textarea id="regret" rows="2" cols="50"></textarea>
       </div>
       <div>
-        <label for="study">3. Study:</label><br>
+        <label for="study">Study:</label><br>
         <textarea id="study" rows="2" cols="50"></textarea>
       </div>
       <div>
-        <label for="exercise">4. Exercise:</label><br>
+        <label for="exercise">Exercise:</label><br>
         <textarea id="exercise" rows="2" cols="50"></textarea>
       </div>
       <br>
-      <button type="button" onclick="saveEntry()">Save</button>
+      <button type="button" id="save-button">Save Entry</button>
     </form>
     <div id="entries">
       <!-- Saved entries will appear here -->
     </div>
-    <script src="./renderer.js"></script>
+    <script src="./preload.js"></script>
   </body>
 </html>
