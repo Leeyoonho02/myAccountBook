@@ -37,11 +37,8 @@ class diaryDataBase:
         return self.c.fetchall()
     
     def getEntryByDate(self, date):
-        temp = self.c.execute('SELECT * FROM pages WHERE Date =?', (date, ))
-        if temp == None:
-            return None
-        else:
-            return self.c.fetchone()
+        self.c.execute('SELECT * FROM pages WHERE Date =?', (date, ))
+        return self.c.fetchone()
     
     def closeTable(self):
         self.conn.close()
